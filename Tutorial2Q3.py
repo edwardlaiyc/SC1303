@@ -58,13 +58,6 @@ for word in list_of_words:
     else:
         #analyse by character
         for char in word:
-            ##is the character an alphabet/digit?
-            if char in morse_code:
-                #add the corresponding morse value to the output, plus a space
-                converted_string += morse_code.get(char)
-                converted_string += " "
-            #character is a special symbol, keep it as is
-            else:
-                converted_string += char
-                converted_string += " "
+            converted_string += morse_code.get(char, char)
+            converted_string += " "
 print(converted_string)
