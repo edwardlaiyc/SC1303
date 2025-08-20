@@ -18,7 +18,7 @@ while current_sum <= 1000:
     #only first 100 numbers will added to the sum
     current_sum += current_number
 
-#if used as we don't want to print this when count>100, sum<=1000
+#if loop used as we don't want to print this when count>100, sum<=1000
 if current_sum > 1000:
     print("Stopping as sum > 1000")
     print("Sum: ", current_sum, "count: ", count)

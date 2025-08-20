@@ -37,26 +37,17 @@ morse_code["7"] = "--..."
 morse_code["8"] = "---.."
 morse_code["9"] = "----."
 
-#convert string to uppercase
 user_input = str(input("Enter a string: ")).upper()
-#create empty string to store converted output
 converted_string = ""
-#user_input split into each word, separated by space, store in a list
 list_of_words = user_input.split()
 
-#iterate through each word
 for word in list_of_words:
-    #is the word a morse value (i.e. dots and dashes)?
     if word in morse_code.values():
-        #find the corresponding alphabet/digit
         for key, value in morse_code.items():
             if value == word:
-                #add the alphabet/digit to the output string, plus a space between words
                 converted_string += key
                 converted_string += " "
-    #the word is not a morse value
     else:
-        #analyse by character
         for char in word:
             converted_string += morse_code.get(char, char)
             converted_string += " "
