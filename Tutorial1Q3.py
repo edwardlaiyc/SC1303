@@ -6,24 +6,24 @@
 for i in range (1000000):
 
     #convert number to string for easier manipulation, and pad w/ leading 0s to form 6 digits
-    firstMile = str(i).zfill(6)
+    firstReading = str(i).zfill(6)
     #test last 4 digits, but not the last 5 digits form palindrome
-    if firstMile[-4:] == firstMile[-4:][::-1] and firstMile[-5::] != firstMile[-5:][::-1]:
+    if firstReading[-4:] == firstReading[-4:][::-1] and firstReading[-5:] != firstReading[-5:][::-1]:
 
         #add one mile
-        secondMile = str(i+1).zfill(6)
+        secondReading = str(i+1).zfill(6)
         #test last 5 digits form palindrome
-        if secondMile[-5:] == secondMile[-5:][::-1]:
+        if secondReading[-5:] == secondReading[-5:][::-1]:
 
             #add one more mile (add 2 to original number)
-            thirdMile = str(i+2).zfill(6)
+            thirdReading = str(i+2).zfill(6)
             #test middle 4 digits form palindrome
-            if thirdMile[1:5] == thirdMile[1:5][::-1]:
+            if thirdReading[1:5] == thirdReading[1:5][::-1]:
 
                 #add one more mile
-                fourthMile = str(i+3).zfill(6)
+                fourthReading = str(i+3).zfill(6)
                 #test all 6 digits are palindrome
-                if fourthMile == fourthMile[::-1]:
+                if fourthReading == fourthReading[::-1]:
 
                     #return number
                     print(i)
